@@ -1,0 +1,20 @@
+{
+  "name": "isaacpark",
+  "version": "0.0.1",
+  "authors": [
+    "Isaac Park <ipark1@kent.edu>"
+  ],
+  "description": "A site to show my projects and information about myself",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#1.0.8"
+  }
+}
