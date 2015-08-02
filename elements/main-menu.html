@@ -1,6 +1,7 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
-<script type="text/javascript" src="../bower_components/materialize/dist/js/materialize.min.js"></script>
+<script type="text/javascript" src="../bower_components/materialize/dist/js/materialize.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <dom-module id="main-menu">
     <template>
@@ -9,7 +10,7 @@
 
                 <a href="" class="brand-logo">{{title}}</a>
 
-                <a href="" data-activates="side-bar" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="#" data-activates="side-bar" class="button-collapse"><i class="material-icons">menu</i></a>
 
                 <ul class="right hide-on-med-and-down">
                     <template is="dom-repeat" items="{{links}}">
@@ -17,7 +18,7 @@
                     </template>
                 </ul>
 
-                <ul class="side-nav" id="mobile-demo">
+                <ul class="side-nav" id="side-bar">
                     <template is="dom-repeat" items="{{links}}">
                         <li class$="{{activate(item.link)}}"><a href="{{item.link}}">{{item.text}}</a></li>
                     </template>
@@ -28,9 +29,6 @@
 
     <script>
 
-        $(document).ready(function() {
-            $(".button-collapse").sideNav('show');
-        });
         Polymer({
             is: 'main-menu',
             properties: {
