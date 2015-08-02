@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <!-- Material design light -->
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.indigo-pink.min.css">
-    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="import" href="main-menu.html">
+    <link type="text/css" rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css"
+          media="screen,projection"/>
+
+
+    <link rel="import" href="elements/PersonalSite-template.html">
+    <link rel="import" href="bower_components/polymer/polymer.html">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,20 +17,20 @@
     <title>Isaac Park</title>
 </head>
 <body>
-
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <main-menu title="Isaac"></main-menu>
-    <main class="mdl-layout__content">
-        <div class="page-content">
-
-            <script type="text/javascript">
-                document.write(JSON.stringify(menu_options));
-            </script>
-
+<PersonalSite-template>
+    <div class="row">
+        <div class="col s12 m6">
+            <p>
+                I'm a Junior at Kent State studying Computer Science with a concentration in Information Security.
+            </p>
         </div>
-    </main>
-</div>
+        <div class="col s12 m6">
+            <p>
 
+            </p>
+        </div>
+    </div>
 
+</PersonalSite-template>
 </body>
 </html>
