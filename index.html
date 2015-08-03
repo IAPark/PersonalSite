@@ -22,13 +22,17 @@
         function update_size() {
             $('#right-card-top').css({'min-height' : $('#left-card-top').height() + 'px'});
 
+            $('#right-card').css({'min-height': '0px'});
+            $('#left-card').css({'min-height': '0px'});
+
+
             var right_height = $('#right-card').height();
             var left_height = $('#left-card').height();
 
             if (left_height > right_height) {
-                $('#right-card').css({'height': left_height + 'px'});
+                $('#right-card').css({'min-height': left_height + 'px'});
             } else {
-                $('#left-card').css({'height': right_height + 'px'});
+                $('#left-card').css({'min-height': right_height + 'px'});
             }
         }
 
