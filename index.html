@@ -19,8 +19,25 @@
 
 
     <script>
+        function update_size() {
+            $('#right-card-top').css({'min-height' : $('#left-card-top').height() + 'px'});
+
+            var right_height = $('#right-card').height();
+            var left_height = $('#left-card').height();
+
+            if (left_height > right_height) {
+                $('#right-card').css({'height': left_height + 'px'});
+            } else {
+                $('#left-card').css({'height': right_height + 'px'});
+            }
+        }
+
         $(document).ready(function() {
             $(".button-collapse").sideNav();
+            update_size();
+        });
+        $(window).on('resize', function(){
+            update_size();
         });
     </script>
 </head>
@@ -28,17 +45,41 @@
 <PersonalSite-template>
     <div class="row">
         <div class="col s12 m6">
-            <div class="card">
+            <div class="card" id="left-card">
                 <div class="card-image">
-                    <img src="images/IsaacParkJune2015.jpg">
+                    <img src="images/IsaacParkJune2015.jpg" id="left-card-top">
                     <span class="card-title">About</span>
                 </div>
                 <div class="card-content">
                     <p>
-                        I'm a Junior at Kent State studying Computer Science with a concentration in Information Security.
-                        I'm intelligent and a hard worker. I'll be turning 19 this October. 
+                        I'm a student at Kent State currently getting my degree in Computer Science. I'm set to graduate
+                        in May 2017. I love to program and I'm really enjoying classes and personal projects.
+                        Someday I hope to work as a software developer and in the near future am looking for internships for Summer 2016
                     </p>
                 </div>
+            </div>
+        </div>
+
+        <div class="col s12 m6">
+                <div class="card" id="right-card">
+                    <div style="position:relative; background-color: #555533" id="right-card-top">
+                        <span class="card-title  pin-bottom" style="position:absolute; bottom:0; padding: 20px;">Social Media</span>
+                    </div>
+                    <div class="card-content">
+
+                        <a href="https://www.linkedin.com/pub/isaac-park/a3/280/a95" class="col s4 valign-wrapper">
+                            <img  border="0" class="responsive-img valign"  src="images/Linkedin.jpg" width="100%">
+                        </a>
+                        <a href="https://github.com/IAPark"  class="col s4 valign-wrapper">
+                            <img  border="0" class="responsive-img valign"  src="images/Github.png" width="100%">
+                        </a>
+                        <a href="https://www.facebook.com/isaac.a.park"  class="col s4 valign-wrapper">
+                            <img  border="0" class="responsive-img valign"  src="images/Facebook.png" width="100%">
+                        </a>
+
+                        <div class="center-align col 2"></div>
+                        <div class="center-align col 2"></div>
+                    </div>
             </div>
         </div>
 
