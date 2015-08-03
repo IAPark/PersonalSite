@@ -82,8 +82,28 @@
                     </div>
             </div>
         </div>
-
     </div>
+
+    <form action="http://formspree.io/ipark1@kent.edu" method="POST">
+        <div class="row">
+            <div class="input-field col m12 l6">
+                <input id="subject" name="_subject" type="text">
+                <label for="subject">Subject</label>
+            </div>
+            <div class="input-field col m12 l6">
+                <input id="from" name="_replyto" type="text">
+                <label for="from">From</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field">
+                <textarea id="body" name="text" class="materialize-textarea"></textarea>
+                <label for="body">Message</label>
+            </div>
+        </div>
+        <input type="hidden" name="_next" value="//site.io/thanks.html" />
+        <button class="waves-effect waves-light btn" type="submit">Send</button>
+    </form>
 
 </PersonalSite-template>
 </body>
