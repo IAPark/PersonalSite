@@ -1,0 +1,40 @@
+<link rel="import"
+      href="../bower_components/polymer/polymer.html">
+
+
+
+<dom-module id="GitHub-activity-feed">
+    <template>
+
+
+    </template>
+
+    <script>
+        Polymer({
+            is: 'GitHub-activity-feed',
+            properties: {
+                user: {
+                    type: String,
+                    value: 'IAPark'
+                }
+            },
+            ready: function() {
+                var activityFeed = this;
+                activityFeed.events = [];
+
+                // update our list every 5 minutes (or longer if we notice we're over using GitHub
+                function update_feed () {
+                    $.ajax({
+                        url: "https://api.github.com//users/:" + activityFeed.user +"/events/"
+                    }).done(function (data) {
+                        console.log(data)
+                    }).error(function (msg) {
+                        console.log(msg)
+                    })
+                }
+                update_feed();
+                setInterval(update_feed, 300000)
+            }
+        });
+    </script>
+</dom-module>

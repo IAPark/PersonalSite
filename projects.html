@@ -6,8 +6,10 @@
           media="screen,projection"/>
 
 
-    <link rel="import" href="elements/PersonalSite-template.html">
     <link rel="import" href="bower_components/polymer/polymer.html">
+
+    <link rel="import" href="elements/PersonalSite-template.html">
+    <link rel="import" href="elements/GitHub-activity-feed.html">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,9 +19,59 @@
     <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.js"></script>
     <title>Isaac Park: Projects</title>
 
+    <script>
+        $(function (){
+            Materialize.toast('Click an image to read more', 3000); // 4000 is the duration of the toast
+        });
+    </script>
 </head>
 <body>
 <PersonalSite-template>
+    <div class="row">
+        <div class="col m4">
+            <div class="card">
+                <div class="card-image waves-block waves-light">
+                    <img class="activator" src="images/Bastion.png">
+                    <span class="card-title activator">Bastion</span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Bastion<i class="material-icons right">close</i></span>
+                    <p>This was one of my first projects after starting college. Its a plugin I developed for use on a
+                    Minecraft server I was on at the time. <a href="//reddit.com/r/civcraft">Civcraft</a>. Currently,
+                        after some edits by a number of people, it's used by the server and sees around 100 players at peak each day</p>
+                </div>
+            </div>
+        </div>
+        <div class="col m4">
+            <div class="card">
+                <div class="card-image waves-block waves-light">
+                    <img class="activator" src="images/KHE-Android.png">
+                    <span class="card-title activator">Kent Hack Enough Android Client</span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Kent Hack Enough Android Client<i class="material-icons right">close</i></span>
+                    <p>At the moment this is my current ongoing project. It will hopefully help our universities hackathon
+                        <a href="//khe.io">Kent Hack Enough</a> send out messaging and schedule updates/reminders  during our hackathon.
+                        There are definitely things I plan to still incuperate including proper push notifications, but this was my first project targeting Android
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col m4">
+            <div class="card">
+                <div class="card-image waves-block waves-light">
+                    <img class="activator" src="images/">
+                    <span class="card-title activator">Kent Hack Enough Android Client</span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Kent Hack Enough Android Client<i class="material-icons right">close</i></span>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <GitHub-activity-feed></GitHub-activity-feed>
 
 </PersonalSite-template>
 </body>
