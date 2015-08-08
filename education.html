@@ -9,6 +9,8 @@
 
 
     <link rel="import" href="elements/PersonalSite-template.html">
+    <link rel="import" href="elements/semester-summery.html">
+
     <link rel="import" href="bower_components/polymer/polymer.html">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,123 +46,125 @@
 
     <div class="row">
         <div class="col s12 m6">
-            <h5 class="center">Fall 2013</h5>
-            <ul class="collapsible" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header">CS I Program/Problem Solving</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">College Writing I</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Oceanography</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Analytical Geometry and Calc I</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-            </ul>
+            <semester-summery time="Fall 2013" classes='
+                    [
+                        {"name": "CS I Program/Problem Solving",
+                        "grade": "A",
+                        "description": ""},
+
+                        {"name": "College Writing I",
+                        "grade": "A",
+                        "description": ""},
+
+                        {"name": "Oceanography",
+                        "grade": "A",
+                        "description": ""},
+
+                        {"name": "Analytic Geometry and Calc I",
+                        "grade": "A",
+                        "description": ""}
+                    ]
+             '></semester-summery>
         </div>
 
         <div class="col s12 m6">
-            <h5 class="center">Spring 2014</h5>
-            <ul class="collapsible" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header">CS II Data Structures</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Discrete Structures for CS</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Analytical Geometry and Calc II</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Comparative Politics</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-            </ul>
-        </div>
-    </div>
+            <semester-summery time="Spring 2014" classes='
+                    [
+                        {"name": "CS II Data Structures",
+                        "grade": "A",
+                        "description": ""},
 
-    <div class="row">
-        <div class="col s12 m6">
-            <h5 class="center">Fall 2014</h5>
-            <ul class="collapsible" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header">Operating Systems</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Computer Architecture</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">College Writing II</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Elementary German I</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Linear Algebra-Application</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-            </ul>
-        </div>
+                        {"name": "Discrete Structures for CS",
+                        "grade": "A",
+                        "description": ""},
 
-        <div class="col s12 m6">
-            <h5 class="center">Spring 2015</h5>
-            <ul class="collapsible" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header">Intro to Database Systems Design</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Computer Comm Networks</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Elementary German II</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Introduction to World Religions</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Introduction to Sociology</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-            </ul>
+                        {"name": "Analytical Geometry and Calc II",
+                        "grade": "A",
+                        "description": ""},
+
+                        {"name": "Comparative Politics",
+                        "grade": "A-",
+                        "description": ""}
+                    ]
+             '></semester-summery>
         </div>
     </div>
 
     <div class="row">
         <div class="col s12 m6">
-            <h5 class="center">Fall 2015 (planned)</h5>
-                <li>
-                    <div class="collapsible-header">Software Engineering</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Introduction to Game Programing</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Design and Analysis of Algorithms</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Digital Information Management and Processing</div>
-                    <div class="collapsible-body"><p></p></div>
-                </li>
+            <semester-summery time="Fall 2014" classes='
+                    [
+                        {"name": "Operating Systems",
+                        "grade": "A",
+                        "description": ""},
+
+                        {"name": "Computer Architecture",
+                        "grade": "A",
+                        "description": ""},
+
+                        {"name": "College Writing II",
+                        "grade": "A",
+                        "description": ""},
+
+                        {"name": "Elementary German I",
+                        "grade": "B+",
+                        "description": ""},
+
+                        {"name": "Linear Algebra-Application",
+                        "grade": "A",
+                        "description": ""}
+                    ]
+             '></semester-summery>
+        </div>
+
+        <div class="col s12 m6">
+            <semester-summery time="Spring 2015" classes='
+                    [
+                        {"name": "Intro to Database Systems Design",
+                        "grade": "A",
+                        "description": ""},
+
+                        {"name": "Computer Comm Networks",
+                        "grade": "B",
+                        "description": ""},
+
+                        {"name": "Elementary German II",
+                        "grade": "B+",
+                        "description": ""},
+
+                        {"name": "Introduction to World Religions",
+                        "grade": "A",
+                        "description": ""},
+
+                        {"name": "Introduction to Sociology",
+                        "grade": "A",
+                        "description": ""}
+                    ]
+             '></semester-summery>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m6">
+            <semester-summery time="Fall 2015 (planned)" classes='
+                    [
+                        {"name": "Software Engineering",
+                        "grade": "~",
+                        "description": ""},
+
+                        {"name": "Introduction to Game Programing",
+                        "grade": "~",
+                        "description": ""},
+
+                        {"name": "Design and Analysis of Algorithms",
+                        "grade": "~",
+                        "description": ""},
+
+                        {"name": "Digital Info Man & Processing",
+                        "grade": "~",
+                        "description": ""}
+                    ]
+             '></semester-summery>
         </div>
     </div>
 </PersonalSite-template>
