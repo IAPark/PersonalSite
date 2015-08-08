@@ -1,0 +1,48 @@
+<link rel="import" href="main-menu.html">
+
+<link rel="import"
+      href="../bower_components/polymer/polymer.html">
+
+<link type="text/css" rel="stylesheet" href="../bower_components/materialize/dist/css/materialize.min.css"
+      media="screen,projection"/>
+<link type="text/css" rel="stylesheet" href="../style.css"
+      media="screen,projection"/>
+
+
+<dom-module id="semester-summery">
+    <template>
+        <h5 class="center">{{time}}</h5>
+        <ul class="collapsible" data-collapsible="accordion">
+            <template is="dom-repeat" items="{{classes}}">
+                <li>
+                    <div class="collapsible-header">{{item.name}}</div>
+                    <div class="collapsible-body">
+                        <p>{{item.description}}</p>
+                        <div class="extra-info">
+                            <span>Grade:  <b>{{item.grade}}</b></span>
+                        </div>
+                    </div>
+                </li>
+            </template>
+        </ul>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'semester-summery',
+            properties: {
+                classes: {
+                    type: Array
+                },
+                time: {
+                    type: String
+                }
+            },
+            ready: function() {
+                $('.collapsible').collapsible({
+                    accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+                });
+            }
+        });
+    </script>
+</dom-module>
