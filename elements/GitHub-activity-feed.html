@@ -1,15 +1,20 @@
-<link rel="import"
-      href="../bower_components/polymer/polymer.html">
-
+<link rel="import" href="../bower_components/polymer/polymer.html">
 
 
 <dom-module id="GitHub-activity-feed">
     <template>
-
-
+        <ul>
+            <template is="dom-repeat" items="{{events}}">
+                <li>
+                    <h1>{{item.title}}</h1>
+                    item.content
+                </li>
+            </template>
+        </ul>
     </template>
 
     <script>
+        var activity_rss;
         Polymer({
             is: 'GitHub-activity-feed',
             properties: {
@@ -20,20 +25,15 @@
             },
             ready: function() {
                 var activityFeed = this;
+                $.ajax({
+                    type: "GET",
+                    url: ("https://github.com/" + activityFeed.user +".atom"),
+                    dataType: "xml",
+                    success: function (xml){
+                        console.log(xml);
+                    }
+                });
                 activityFeed.events = [];
-
-                // update our list every 5 minutes (or longer if we notice we're over using GitHub
-                function update_feed () {
-                    $.ajax({
-                        url: "https://api.github.com//users/:" + activityFeed.user +"/events/"
-                    }).done(function (data) {
-                        console.log(data)
-                    }).error(function (msg) {
-                        console.log(msg)
-                    })
-                }
-                update_feed();
-                setInterval(update_feed, 300000)
             }
         });
     </script>
