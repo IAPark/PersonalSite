@@ -2,12 +2,6 @@
 <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<script>
-    $(document).ready(function() {
-        $(".button-collapse").sideNav();
-    });
-</script>
-
 <dom-module id="main-menu">
     <template>
         <nav>
@@ -25,7 +19,7 @@
 
                 <ul class="side-nav" id="side-bar">
                     <template is="dom-repeat" items="{{links}}">
-                        <li class$="{{activate(item.link)}}"><a href="{{item.link}}">{{item.text}}</a></li>
+                        <li class$="{{activate(item.link)}}"><a href="{{item.link}}"  style="color: darkgray;">{{item.text}}</a></li>
                     </template>
                 </ul>
             </div>
@@ -67,6 +61,11 @@
                 else {
                     return "";
                 }
+            },
+            ready: function(){
+                $(document).ready(function() {
+                    $(".button-collapse").sideNav();
+                });
             }
 
         });
