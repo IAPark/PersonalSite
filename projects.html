@@ -9,7 +9,8 @@
     <link rel="import" href="bower_components/polymer/polymer.html">
 
     <link rel="import" href="elements/PersonalSite-template.html">
-    <link rel="import" href="elements/GitHub-activity-feed.html">
+    <link rel="import" href="elements/project.html">
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,54 +18,195 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.js"></script>
 
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script>
-        google.load("feeds", "1");
-    </script>
-
     <title>Isaac Park: Projects</title>
 
-    <script>
-        $(function (){
-            Materialize.toast('Click an image to read more', 3000); // 4000 is the duration of the toast
-        });
-    </script>
 </head>
 <body>
 <PersonalSite-template>
     <div class="row">
-        <div class="col m4">
-            <div class="card">
-                <div class="card-image waves-block waves-light">
-                    <img class="activator" src="images/Bastion.png">
-                    <span class="card-title activator">Bastion</span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Bastion<i class="material-icons right">close</i></span>
-                    <p>This was one of my first projects after starting college. Its a plugin I developed for use on a
-                    Minecraft server I was on at the time. <a href="//reddit.com/r/civcraft">Civcraft</a>. Currently,
-                        after some edits by a number of people, it's used by the server and sees around 100 players at peak each day</p>
+        <project-view class="col m6 s12 offset-m3 offset-s0">
+            <h3 class="project-title">PITherm:</h3>
+            <h5 class="project-summery">A Raspberry Pi Based Smart Thermostat</h5>
+
+            <div class="project-brief row">
+                <div class="col s10 offset-l2 white-text bottom-sheet" style="margin-top: 20px">
+                    <h5>Source</h5>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/IAPark/PITherm" style="color: white;">Backend</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/IAPark/PITherm-frontend" style="color: white;">Frontend</a>
+                        </li>
+                    </ul>
+
+                    <h5>Languages</h5>
+                    <ul>
+                        <li>
+                            <a href="https://www.python.org/" style="color: white;">Python</a>
+                        </li>
+                        <li>
+                            <a href="http://www.typescriptlang.org/" style="color: white;">TypeScript</a>
+                        </li>
+                    </ul>
+
+                    <h5>Frameworks</h5>
+                    <ul>
+                        <li>
+                            <a href="http://flask.pocoo.org/" style="color: white;">Flask</a>
+                        </li>
+                        <li>
+                            <a href="https://angular.io/" style="color: white;">Angular 2</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="col m4">
-            <div class="card">
-                <div class="card-image waves-block waves-light">
-                    <img class="activator" src="images/KHE-Android.png">
-                    <span class="card-title activator">Kent Hack Enough Android Client</span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Kent Hack Enough Android Client<i class="material-icons right">close</i></span>
-                    <p>At the moment this is my current ongoing project. It will hopefully help our universities hackathon
-                        <a href="//khe.io">Kent Hack Enough</a> send out messaging and schedule updates/reminders  during our hackathon.
-                        There are definitely things I plan to still incuperate including proper push notifications, but this was my first project targeting Android
-                    </p>
-                </div>
-            </div>
-        </div>
+
+            <p>
+                This is my current project and as such it is a work in progress. I'm trying to make a smart Thermostat
+                with my Raspberry PI. At the moment, I have a mostly working
+                <a href="https://github.com/IAPark/PITherm-frontend">frontend</a> written in
+                <a href="https://angular.io/">Angular 2</a> and a in theory working
+                <a href="https://github.com/IAPark/PITherm/">backend</a> written in
+                <a href="http://flask.pocoo.org/">Flask</a>.
+            </p>
+
+            <p>
+                The next step is to turn it into a system that we'd actually want to use to control the AC. In
+                particular a better interface to set temperature and a live updating feed of the current temperature
+                is a must. On the backend, I need to finish the hardware and try to fudge the temperature sensor to
+                get slightly more accurate readings, but most importantly I want to implement decent security.
+            </p>
+
+            <p>
+                One of the most annoying things about this project was my decision to use Angular 2 for the frontend.
+                It's a really nice framework and I love learning new things, but it's still in alpha and is not intended
+                for production projects. Given this was a learning exercise I didn't think this would be too much of a
+                problem,
+                but because it's so new there isn't any documentation for it yet and some of the documentation that
+                does exists is out of date. The good news is because of these factors it has a lot of issues that I
+                can actually fix.
+            </p>
+        </project-view>
     </div>
 
-    <GitHub-activity-feed></GitHub-activity-feed>
+    <div class="row">
+        <project-view class="col m6 s12 offset-m3 offset-s0">
+
+            <h3 class="project-title"><a href="https://khe.io/">KHE</a> Android App:</h3>
+            <h5 class="project-summery">An Android app for our school's hackathon</h5>
+
+            <div class="project-brief row">
+                <div class="col s10 offset-l2 white-text bottom-sheet" style="margin-top: 20px">
+                    <h5>Summery</h5>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/hacksu/kenthackenough-android" style="color: white;">Source</a>
+                        </li>
+                        <li>
+                            <a href="https://www.python.org/" style="color: white;">Java</a>
+                        </li>
+                    </ul>
+
+                    <h5>Elements</h5>
+                    <ul>
+                        <li>
+                            Messaging
+                        </li>
+                        <li>
+                            Events
+                        </li>
+                        <li>
+                            socket.io
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <p>
+                This is a project that will probably pick up again as we get closer to the event on October 11th. The
+                App serves as an interface for a backend written by one of our leaders
+                <a href="http://pauldilyard.com/">Paul Dilyard</a>. The system supports events and live messages and may
+                eventually support a voting system for a prize.
+            </p>
+
+            <p>
+                This was my first Android app so most of the initial time was spent trying to understand Android's API,
+                but with that issue eventually mostly solved, the next issue was communication. The eventually plan is
+                to
+                have four developers each working on a platform (Android, IOS, Windows, and the web) I'm the closest to
+                done,
+                but trying to work out what my project should do exactly as compared to the other three has been an
+                issue.
+                During the school year we had simi-regular meetings that helped a lot.
+            </p>
+
+            <p>
+                The biggest missing feature is push notifications. The backend uses socket.io which my app listens to,
+                but
+                proper push notification has not yet been implemented.
+            </p>
+        </project-view>
+
+
+        <div class="row">
+            <project-view class="col m6 s12 offset-m3 offset-s0">
+
+                <h3 class="project-title">Bastion:</h3>
+                <h5 class="project-summery">A "balanced" area protection plugin for Minecraft</h5>
+
+                <div class="project-brief row">
+                    <div class="col s10 offset-l2 white-text bottom-sheet" style="margin-top: 20px">
+                        <h5>Summery</h5>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/hacksu/kenthackenough-android" style="color: white;">Source</a>
+                            </li>
+                            <li>
+                                <a href="https://www.python.org/" style="color: white;">Java</a>
+                            </li>
+                        </ul>
+
+                        <h5>Elements</h5>
+                        <ul>
+                            <li>
+                                Messaging
+                            </li>
+                            <li>
+                                Events
+                            </li>
+                            <li>
+                                socket.io
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>
+                    This is a project that will probably pick up again as we get closer to the event on October 11th. The
+                    App serves as an interface for a backend written by one of our leaders
+                    <a href="http://pauldilyard.com/">Paul Dilyard</a>. The system supports events and live messages and may
+                    eventually support a voting system for a prize.
+                </p>
+
+                <p>
+                    This was my first Android app so most of the initial time was spent trying to understand Android's API,
+                    but with that issue eventually mostly solved, the next issue was communication. The eventually plan is
+                    to
+                    have four developers each working on a platform (Android, IOS, Windows, and the web) I'm the closest to
+                    done,
+                    but trying to work out what my project should do exactly as compared to the other three has been an
+                    issue.
+                    During the school year we had simi-regular meetings that helped a lot.
+                </p>
+
+                <p>
+                    The biggest missing feature is push notifications. The backend uses socket.io which my app listens to,
+                    but
+                    proper push notification has not yet been implemented.
+                </p>
+            </project-view>
+    </div>
 
 </PersonalSite-template>
 </body>

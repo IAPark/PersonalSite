@@ -3,15 +3,14 @@
 
 <dom-module id="GitHub-activity-feed">
     <template>
-        <ul>
-            <template is="dom-repeat" items="{{events}}">
-                <li>
-                    <h1>{{item.title}}</h1>
-                    item.content
-                </li>
-            </template>
-        </ul>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+        <link rel="stylesheet" href="../github-activity/dist/github-activity-0.1.1.min.css">
+
+        <div id="feed"></div>
     </template>
+
+    <script type="text/javascript" src="../github-activity/dist/github-activity-0.1.1.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
 
     <script>
         var activity_rss;
@@ -24,16 +23,10 @@
                 }
             },
             ready: function() {
-                var activityFeed = this;
-                $.ajax({
-                    type: "GET",
-                    url: ("https://github.com/" + activityFeed.user +".atom"),
-                    dataType: "xml",
-                    success: function (xml){
-                        console.log(xml);
-                    }
+                GitHubActivity.feed({
+                    username: this.user,
+                    selector: "#feed"
                 });
-                activityFeed.events = [];
             }
         });
     </script>
