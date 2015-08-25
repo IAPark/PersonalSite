@@ -11,20 +11,22 @@
 
 <dom-module id="semester-summery">
     <template>
-        <h5 class="center">{{time}}</h5>
-        <ul class="collapsible" data-collapsible="accordion">
-            <template is="dom-repeat" items="{{classes}}">
-                <li>
-                    <div class="collapsible-header">{{item.name}}</div>
-                    <div class="collapsible-body">
-                        <p>{{item.description}}</p>
-                        <div class="extra-info">
-                            <span>Grade:  <b>{{item.grade}}</b></span>
+            <h5 class="center">{{time}}</h5>
+
+            <ul class="collapsible popout z-depth-2" data-collapsible="accordion">
+                <template is="dom-repeat" items="{{classes}}">
+                    <li>
+                        <div class="collapsible-header">{{item.name}}</div>
+                        <div class="collapsible-body">
+                            <p>{{item.description}}</p>
+
+                            <div class="extra-info">
+                                <span>Grade:  <b>{{item.grade}}</b></span>
+                            </div>
                         </div>
-                    </div>
-                </li>
-            </template>
-        </ul>
+                    </li>
+                </template>
+            </ul>
     </template>
 
     <script>
@@ -38,9 +40,9 @@
                     type: String
                 }
             },
-            ready: function() {
+            ready: function () {
                 $('.collapsible').collapsible({
-                    accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+                    accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
                 });
             }
         });
