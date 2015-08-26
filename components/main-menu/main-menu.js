@@ -20,7 +20,8 @@ var router_1 = require('angular2/router');
 var MainMenu = (function () {
     function MainMenu(router) {
         this.router = router;
-        $(".button-collapse").sideNav();
+        this.button_collapse = $(".button-collapse");
+        this.button_collapse.sideNav();
         this.title = "Isaac Park";
         this.links = [
             {
@@ -37,6 +38,9 @@ var MainMenu = (function () {
             }
         ];
     }
+    MainMenu.prototype.toggle = function () {
+        this.button_collapse.click();
+    };
     MainMenu.prototype.class_for_link = function (link) {
         var path = this.router._currentInstruction.component._recognizer.path;
         if (path === '/') {

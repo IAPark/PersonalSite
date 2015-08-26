@@ -19,8 +19,10 @@ import {RouterLink, Router, RouteRegistry} from 'angular2/router';
 export class MainMenu{
     links: Array<{component: string, text: string}>;
     title: string;
+    button_collapse: JQuery;
     constructor(private router: Router) {
-        $(".button-collapse").sideNav();
+        this.button_collapse = $(".button-collapse");
+        this.button_collapse.sideNav();
         this.title = "Isaac Park";
         this.links = [
             {
@@ -37,6 +39,10 @@ export class MainMenu{
             }
         ];
     }
+    toggle() {
+        this.button_collapse.click();
+    }
+
     class_for_link(link): string {
         let path = this.router._currentInstruction.component._recognizer.path;
         if(path === '/') {
