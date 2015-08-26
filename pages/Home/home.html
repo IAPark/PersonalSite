@@ -37,7 +37,7 @@
     </div>
 </div>
 
-<form action="http://formspree.io/ipark1@kent.edu" method="POST">
+<form action="http://formspree.io/ipark1@kent.edu" method="POST" style="margin-bottom: 20px;">
     <div class="row">
         <div class="input-field col s12 l6">
             <input id="subject" name="_subject" type="text">
@@ -48,14 +48,16 @@
             <label for="from">From</label>
         </div>
     </div>
-    <div class="row">
-        <div class="input-field col s12">
-            <textarea id="body" name="text" class="materialize-textarea" style="width:100%"></textarea>
+    <div class="row" id="container">
+        <div class="input-field col l10 s12">
+            <textarea id="body" name="text" class="materialize-textarea" style="width:100%; position:relative"></textarea>
             <label for="body">Message</label>
+        </div>
+        <div class="col s2" style="padding-top: 65px">
+            <button class="waves-effect waves-light btn right" type="submit">
+                <i class="material-icons right">send</i>Contact Me
+            </button>
         </div>
     </div>
     <input type="hidden" name="_next" value="http://isaacpark.me/#/thanks-for-contacting-me" />
-    <button class="waves-effect waves-light btn" style="margin-bottom: 20px;" type="submit">
-        <i class="material-icons right">send</i>Contact Me
-    </button>
 </form>
