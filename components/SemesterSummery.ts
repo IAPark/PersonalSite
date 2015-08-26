@@ -43,7 +43,7 @@ export class SemesterSummery{
     onChange(changes) {
         if(changes["classes"]) {
             this.changing = true;
-\        }
+        }
     }
 
 
