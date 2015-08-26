@@ -12,7 +12,7 @@ import {Project} from "components/project"
     selector: 'projects'
 })
 @View({
-    templateUrl: 'pages/Projects/Projects.html',
+    templateUrl: 'pages/Projects/projects.html',
     directives: [Project]
 })
 export class Projects{

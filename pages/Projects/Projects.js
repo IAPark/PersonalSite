@@ -25,7 +25,7 @@ var Projects = (function () {
             selector: 'projects'
         }),
         angular2_1.View({
-            templateUrl: 'pages/Projects/Projects.html',
+            templateUrl: 'pages/Projects/projects.html',
             directives: [project_1.Project]
         }), 
         __metadata('design:paramtypes', [])
