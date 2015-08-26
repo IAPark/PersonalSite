@@ -1,124 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- index.html -->
+<html>
 <head>
-    <link type="text/css" rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css"
-          media="screen,projection"/>
-
-    <link rel="import" href="elements/PersonalSite-template.html">
-    <link rel="import" href="bower_components/polymer/polymer.html">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Isaac Park</title>
+    <script src="bower_components/traceur-runtime/traceur-runtime.js"></script>
+    <script src="bower_components/system.js_jspm/system@0.16.11.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-alpha.35/angular2.dev.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-alpha.35/router.dev.js"></script>
     <meta name="google-site-verification" content="Ek6xJegR0Zu6eV5Vcwmn8ZMpjf1OSfCbgev-cCEUdKA" />
 
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+
+    <link type="text/css" rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css"
+          media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.js"></script>
-
-    <title>Isaac Park</title>
-
-
-    <script>
-        var right_card, left_card;
-        function update_size() {
-            right_card.css({'min-height': '0px'});
-            left_card.css({'min-height': '0px'});
-
-            //when the two cards are next to each other we want to keep them the same size
-            if($(window).width() > 992-17) {
-                var right_height = right_card.height() + 20;
-                var left_height = left_card.height();
-
-                if (left_height > right_height) {
-                    right_card.css({'min-height': left_height + 'px'});
-                } else {
-                    left_card.css({'min-height': right_height + 'px'});
-                    // kind of hacky but I can't get the padding to work
-                    right_card.css({'min-height': right_height + 'px'});
-                }
-            } else {
-                right_card.css({'min-height': (right_card.height() + 20) + 'px'});
-            }
-        }
-
-        $(document).ready(function() {
-            right_card = $('#right-card');
-            left_card = $('#left-card');
-            update_size();
-        });
-        $(window).on('resize', function(){
-            update_size();
-        });
-        $(window).load(function(){
-            update_size();
-        });
-    </script>
 </head>
 <body>
-<PersonalSite-template>
-
-    <div class="row">
-        <div class="col s12 offset-m1 offset-l0 m10 l6">
-            <div class="card" id="left-card">
-                <div class="card-image">
-                    <img src="images/IsaacParkJune2015.jpg" id="left-card-top">
-                    <span class="card-title">About</span>
-                </div>
-                <div class="card-content">
-                    <p>
-                        I'm a student at Kent State currently getting a Bachelor of Science in Computer Science. I'm set to graduate
-                        in May 2017. I love to program and I'm really enjoying classes and personal projects.
-                        Someday I hope to work as a software developer and in the near future am looking for internships for Summer 2016
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col s12 offset-m1 offset-l0 m10 l6">
-            <div class="card" id="right-card">
-                <div class="card-image">
-                    <img src="images/Mountains.jpg" id="right-card-top">
-                    <span class="card-title">Social Media</span>
-                </div>
-                <div class="card-content">
-
-                    <a href="https://www.linkedin.com/pub/isaac-park/a3/280/a95" class="col s4">
-                        <img  border="0" class="responsive-img"  src="images/Linkedin.jpg" width="100%">
-                    </a>
-                    <a href="https://github.com/IAPark"  class="col s4">
-                        <img  border="0" class="responsive-img"  src="images/Github.png" width="100%">
-                    </a>
-                    <a href="https://www.facebook.com/isaac.a.park"  class="col s4 left">
-                        <img  border="0" class="responsive-img left"  src="images/Facebook.png" width="100%">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <form action="http://formspree.io/ipark1@kent.edu" method="POST">
-        <div class="row">
-            <div class="input-field col s12 l6">
-                <input id="subject" name="_subject" type="text">
-                <label for="subject">Subject</label>
-            </div>
-            <div class="input-field col s12 l6">
-                <input id="from" name="_replyto" type="text">
-                <label for="from">From</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <textarea id="body" name="text" class="materialize-textarea" style="width:100%"></textarea>
-                <label for="body">Message</label>
-            </div>
-        </div>
-        <input type="hidden" name="_next" value="http://isaacpark.me/thanks-for-contacting-me.html" />
-        <button class="waves-effect waves-light btn" style="margin-bottom: 20px;" type="submit">
-            <i class="material-icons right">send</i>Contact Me
-        </button>
-    </form>
-
-</PersonalSite-template>
+<!-- The app component created in app.ts -->
+<app></app>
+<script>
+    System.import('app');
+</script>
 </body>
 </html>

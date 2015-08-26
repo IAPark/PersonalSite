@@ -1,11 +1,9 @@
 {
-  "name": "isaacpark",
-  "version": "0.0.1",
+  "name": "PersonalSite",
+  "version": "0.0.0",
   "authors": [
-    "Isaac Park <ipark1@kent.edu>"
+    "Isaac Park <isaac.a.park@gmail.com>"
   ],
-  "description": "A site to show my projects and information about myself",
-  "main": "index.html",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -13,9 +11,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "polymer": "Polymer/polymer#1.0.8",
-    "materialize": "Materialize/materialize#0.97.0"
-  }
+  ]
 }

@@ -1,0 +1,62 @@
+<div class="row flex-large">
+    <div class="col s12 offset-m1 offset-l0 m10 l6 flex-large">
+        <div class="card">
+            <div class="card-image">
+                <img src="images/IsaacParkJune2015.jpg">
+                <span class="card-title">About</span>
+            </div>
+            <div class="card-content">
+                <p>
+                    I'm a student at Kent State currently getting a Bachelor of Science in Computer Science. I'm set to graduate
+                    in May 2017. I love to program and I'm really enjoying classes and personal projects.
+                    Someday I hope to work as a software developer and in the near future am looking for internships for Summer 2016
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 offset-m1 offset-l0 m10 l6 flex-large">
+        <div class="card" id="right-card">
+            <div class="card-image">
+                <img src="images/Mountains.jpg" id="right-card-top">
+                <span class="card-title">Social Media</span>
+            </div>
+            <div class="card-content">
+
+                <a href="https://www.linkedin.com/pub/isaac-park/a3/280/a95" class="col s4">
+                    <img  border="0" class="responsive-img"  src="images/Linkedin.jpg" width="100%">
+                </a>
+                <a href="https://github.com/IAPark"  class="col s4">
+                    <img  border="0" class="responsive-img"  src="images/Github.png" width="100%">
+                </a>
+                <a href="https://www.facebook.com/isaac.a.park"  class="col s4 left">
+                    <img  border="0" class="responsive-img left"  src="images/Facebook.png" width="100%">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<form action="http://formspree.io/ipark1@kent.edu" method="POST">
+    <div class="row">
+        <div class="input-field col s12 l6">
+            <input id="subject" name="_subject" type="text">
+            <label for="subject">Subject</label>
+        </div>
+        <div class="input-field col s12 l6">
+            <input id="from" name="_replyto" type="text">
+            <label for="from">From</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <textarea id="body" name="text" class="materialize-textarea" style="width:100%"></textarea>
+            <label for="body">Message</label>
+        </div>
+    </div>
+    <input type="hidden" name="_next" value="http://isaacpark.me/#/thanks-for-contacting-me" />
+    <button class="waves-effect waves-light btn" style="margin-bottom: 20px;" type="submit">
+        <i class="material-icons right">send</i>Contact Me
+    </button>
+</form>
