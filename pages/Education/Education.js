@@ -25,7 +25,7 @@ var Education = (function () {
             selector: 'education'
         }),
         angular2_1.View({
-            templateUrl: 'pages/Education/Education.html',
+            templateUrl: 'pages/Education/education.html',
             directives: [SemesterSummery_1.SemesterSummery]
         }), 
         __metadata('design:paramtypes', [])

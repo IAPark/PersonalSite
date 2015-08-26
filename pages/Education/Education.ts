@@ -14,7 +14,7 @@ import {SemesterSummery} from 'components/SemesterSummery'
     selector: 'education'
 })
 @View({
-    templateUrl: 'pages/Education/Education.html',
+    templateUrl: 'pages/Education/education.html',
     directives: [SemesterSummery]
 })
 export class Education{
