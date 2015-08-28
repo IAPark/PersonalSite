@@ -8,14 +8,14 @@
 import {Component, View, NgFor, NgIf} from 'angular2/angular2';
 
 import {RouterLink, Router} from 'angular2/router';
-import {SemesterSummery} from 'components/SemesterSummery'
+import {SemesterSummary} from '../../components/SemesterSummary'
 
 @Component({
     selector: 'education'
 })
 @View({
     templateUrl: 'pages/Education/education.html',
-    directives: [SemesterSummery]
+    directives: [SemesterSummary]
 })
 export class Education{
     constructor() {

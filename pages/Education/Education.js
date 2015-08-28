@@ -16,7 +16,7 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var SemesterSummery_1 = require('components/SemesterSummery');
+var SemesterSummary_1 = require('../../components/SemesterSummary');
 var Education = (function () {
     function Education() {
     }
@@ -26,7 +26,7 @@ var Education = (function () {
         }),
         angular2_1.View({
             templateUrl: 'pages/Education/education.html',
-            directives: [SemesterSummery_1.SemesterSummery]
+            directives: [SemesterSummary_1.SemesterSummary]
         }), 
         __metadata('design:paramtypes', [])
     ], Education);

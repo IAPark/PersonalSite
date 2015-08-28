@@ -6,7 +6,7 @@ import {Component, View, NgFor, NgIf, LifecycleEvent} from 'angular2/angular2';
 
 
 @Component({
-    selector: 'semester-summery',
+    selector: 'semester-summary',
     properties: ['time', 'classes'],
     lifecycle: [LifecycleEvent.onAllChangesDone, LifecycleEvent.onChange]
 })
@@ -29,7 +29,7 @@ import {Component, View, NgFor, NgIf, LifecycleEvent} from 'angular2/angular2';
     `,
     directives: [ NgFor, NgIf]
 })
-export class SemesterSummery{
+export class SemesterSummary{
     time: string;
     classes: Array<{name: string, description: string, grade: string}>;
     private changing: boolean = false;

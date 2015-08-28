@@ -13,8 +13,8 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var SemesterSummery = (function () {
-    function SemesterSummery() {
+var SemesterSummary = (function () {
+    function SemesterSummary() {
         this.changing = false;
         $(function () {
             $('.collapsible').collapsible({
@@ -22,12 +22,12 @@ var SemesterSummery = (function () {
             });
         });
     }
-    SemesterSummery.prototype.onChange = function (changes) {
+    SemesterSummary.prototype.onChange = function (changes) {
         if (changes["classes"]) {
             this.changing = true;
         }
     };
-    SemesterSummery.prototype.onAllChangesDone = function () {
+    SemesterSummary.prototype.onAllChangesDone = function () {
         if (this.changing) {
             setTimeout(function () {
                 $('.collapsible').collapsible();
@@ -35,9 +35,9 @@ var SemesterSummery = (function () {
             this.changing = false;
         }
     };
-    SemesterSummery = __decorate([
+    SemesterSummary = __decorate([
         angular2_1.Component({
-            selector: 'semester-summery',
+            selector: 'semester-summary',
             properties: ['time', 'classes'],
             lifecycle: [angular2_1.LifecycleEvent.onAllChangesDone, angular2_1.LifecycleEvent.onChange]
         }),
@@ -46,8 +46,8 @@ var SemesterSummery = (function () {
             directives: [angular2_1.NgFor, angular2_1.NgIf]
         }), 
         __metadata('design:paramtypes', [])
-    ], SemesterSummery);
-    return SemesterSummery;
+    ], SemesterSummary);
+    return SemesterSummary;
 })();
-exports.SemesterSummery = SemesterSummery;
-//# sourceMappingURL=SemesterSummery.js.map
+exports.SemesterSummary = SemesterSummary;
+//# sourceMappingURL=SemesterSummary.js.map
