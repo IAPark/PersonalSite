@@ -38,29 +38,29 @@
         </div>
 
         <p>
-            This is my current project and as such it is a work in progress. I'm trying to make a smart Thermostat
+            This is my current project and thus is a work in progress. I'm trying to make a smart thermostat
             with my Raspberry PI. At the moment, I have a mostly working
             <a href="https://github.com/IAPark/PITherm-frontend">frontend</a> written in
-            <a href="https://angular.io/">Angular 2</a> and a in theory working
+            <a href="https://angular.io/">Angular 2</a> and a working
             <a href="https://github.com/IAPark/PITherm/">backend</a> written in
-            <a href="http://flask.pocoo.org/">Flask</a>.
+            <a href="http://flask.pocoo.org/">Flask</a> that remains to be tested by real use.
         </p>
 
         <p>
-            The next step is to turn it into a system that we'd actually want to use to control the AC. In
+            The next step is to turn it into a system that we'd actually want to use to control the AC, in
             particular a better interface to set temperature and a live updating feed of the current temperature
-            is a must. On the backend, I need to finish the hardware and try to fudge the temperature sensor to
-            get slightly more accurate readings, but most importantly I want to implement decent security.
+            is a must. On the backend, I need to finish the hardware and try to use approximations with the temperature
+            sensor to get slightly more accurate readings. Most importantly, I want to implement better security.
         </p>
 
         <p>
             One of the most annoying things about this project was my decision to use Angular 2 for the frontend.
-            It's a really nice framework and I love learning new things, but it's still in alpha and is not intended
-            for production projects. Given this was a learning exercise I didn't think this would be too much of a
-            problem,
-            but because it's so new there isn't any documentation for it yet and some of the documentation that
-            does exists is out of date. The good news is because of these factors it has a lot of issues that I
-            can actually fix.
+            It's a nice framework and I love learning new things, but it's still in alpha and is not intended
+            for production projects. Given this was a learning exercise, I didn't think this would be too much of a
+            problem, but because it's so new there isn't good documentation for it yet and some of the documentation
+            that does exists is out of date. On the positive side, because of these factors it has a lot of issues
+            that I can actually fix and I'm <a href="https://github.com/angular/angular/pull/3793">finally</a>
+            contributing to an open source project.
         </p>
     </project>
 </div>
@@ -69,7 +69,7 @@
     <project class="col m6 s12 offset-m3 offset-s0">
 
         <h3 class="project-title"><a href="https://khe.io/">KHE</a> Android App:</h3>
-        <h5 class="project-summery">An Android app for our school's hackathon</h5>
+        <h5 class="project-summery">An Android app for Kent State University's hackathon</h5>
 
         <div class="project-brief row">
             <div class="col s10 offset-l2 white-text bottom-sheet" style="margin-top: 20px;">
@@ -82,34 +82,30 @@
                         <a href="https://java.com/en/" style="color: white;">Java</a>
                     </li>
                     <li>
-                        <a href="http://socket.io/" style="color: white;">socket.io</a>
+                        <a href="http://socket.io/" style="color: white;">Socket.IO</a>
                     </li>
                 </ul>
             </div>
         </div>
 
         <p>
-            This is a project that will probably pick up again as we get closer to the event on October 11th. The
-            App serves as an interface for a backend written by one of our leaders
+            This is a project that will probably pick up again as I get closer to the event on October 11th. The
+            app serves as an interface for a backend written by one of our leaders
             <a href="http://pauldilyard.com/">Paul Dilyard</a>. The system supports events and live messages and may
             eventually support a voting system for a prize.
         </p>
 
         <p>
-            This was my first Android app so most of the initial time was spent trying to understand Android's API,
-            but with that issue eventually mostly solved, the next issue was communication. The eventually plan is
-            to
-            have four developers each working on a platform (Android, IOS, Windows, and the web) I'm the closest to
-            done,
-            but trying to work out what my project should do exactly as compared to the other three has been an
-            issue.
-            During the school year we had semi-regular meetings that helped a lot.
+            This was my first Android app so most of my initial time was spent trying to understand Android's API,
+            but with that issue eventually mostly solved, the next issue was communication. The eventual plan is
+            to have four developers, each working on a platform (Android, IOS, Windows, and the web).  I'm the
+            closest to done, but trying to work out what my project should do as compared to the other three
+            has led to communication challenges. Semi-regular meetings during the school year helped a lot.
         </p>
 
         <p>
-            The biggest missing feature is push notifications. The backend uses socket.io which my app listens to,
-            but
-            proper push notification has not yet been implemented.
+            The biggest missing feature is push notifications. The backend uses Socket.IO which my app listens to,
+            but proper push notification has not yet been implemented.
         </p>
     </project>
 </div>
@@ -149,36 +145,27 @@
         </div>
 
         <p>
-            When I was in High School, I discovered programming and Minecraft in that order. It was perhaps natural
+            When I was in high school, I discovered programming and Minecraft in that order. It was perhaps natural
             then that one of the first projects I would undertake was Minecraft related. This is probably the
-            hardest
-            of my projects to explain, but in essence this plugin was designed for and is used exclusively on
-            <a href="https://www.reddit.com/r/civcraft/">Civraft</a> a server based on building up tools for players
+            hardest of my projects to explain, but in essence this plugin was designed for and is used exclusively on
+            <a href="https://www.reddit.com/r/civcraft/">Civcraft</a>, a server based on building up tools for players
             so that while there are almost no rules things can still be protected and players can in a way punish
-            other
-            players. Think <a href="https://www.eveonline.com/">Eve Online</a> for Minecraft. When I designed
-            Bastion,
-            there was <a href="https://github.com/civcraft/citadel">Citadel</a>, a plugin designed to protect blocks
-            by allowing the user to "reinforce" them with various resource to make them take multiple breaks to
-            actually
-            break. This is useful for protecting homes and other builds from people wanting to destroy them, but it
-            leaves a pretty big problem, which is there is nothing stopping blocks being placed. Bastion Aims to fix
-            that.
+            other players. Think <a href="https://www.eveonline.com/">Eve Online</a> for Minecraft. When I designed
+            Bastion, there was <a href="https://github.com/civcraft/citadel">Citadel</a>, a plugin designed to protect
+            blocks by allowing the user to "reinforce" them with various resources to make them take multiple break
+            to actually break. This is useful for protecting homes and other builds from people wanting to destroy
+            them, but it leaves a pretty big problem, namely that there is nothing stopping blocks from being placed.
+            Bastion aims to fix that.
         </p>
 
         <p>
             The big challenge for me was dealing with such a large code base for the first time. I did eventually
-            make
-            my way through with lots of mistakes along the way. Now that I know so much more I'd like to go back at
-            some
-            point and rewrite some things a got wrong the first time. If nothing else I'd love to go back and add
-            unit
-            tests. At the time I couldn't work out how to do it, but now with knowledge of the concept of Inversion
-            of
-            Control I think I could do a much better job, but I'm trying to really devote my time to bettering
-            myself
-            as a developer and give Java is a bit of a deadend and I'm not playing on the server any more it's taken
-            a back seat.
+            make my way through with lots of mistakes along the way. Now that I know so much more I'd like to go back at
+            some point and rewrite some things I got wrong the first time. If nothing else, I'd love to go back and add
+            unit tests. At the time I couldn't work out how to do it, but now with knowledge of the concept of Inversion
+            of Control I think I could do a much better job, but I'm trying to really devote my time to bettering
+            myself as a developer and given Java is a bit of a deadend and I'm not playing on the server anymore it's
+            taken a backseat.
         </p>
     </project>
 </div>
@@ -201,8 +188,7 @@
 
                 <h5>Sources</h5>
                 <ul>
-                    <li><a href="https://github.com/IAPark/HealthInformationSystemInterface">Database Project</a>
-                    </li>
+                    <li><a href="https://github.com/IAPark/HealthInformationSystemInterface">Database Project</a></li>
                     <li><a href="https://github.com/IAPark/CrossViewStreetView">CrossViewStreetView</a></li>
                     <li><a href="https://github.com/IAPark/RandomGoogleStreetView">ART</a></li>
                 </ul>
@@ -210,19 +196,10 @@
         </div>
 
         <p>
-            There are so many other smaller projects I've made from the small programs that taught me to program to
-            class
-            projects and small experiments. I'll link to just a few examples that I have built by myself and with
-            others.
-        </p>
-
-        <p>
-            This is the primary way I've learned to program and new technologies and languages. By making projects.
-            some inside school but many out I've learned more about programming than I ever have in the classroom.
-        </p>
-
-        <p>
-            My Github accounts are: <a href="//github.com/IAPark">IAPark</a> and <a href="//github.com/spaceFountain">spaceFountain</a>
+            Many other smaller projects have helped me become a better programmer. While I started these projects for
+            diverse reasons: some for class and many more outside of it. I can easily say that it is these projects more
+            than any time spent in a class room that has taught me to program. I'll link to just a few examples of these
+            and it should be noted that many of these projects do not exist on GitHub or even on my current hard drive.
         </p>
     </project>
 </div>
