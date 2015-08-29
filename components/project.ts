@@ -11,8 +11,8 @@ import {Component, View, NgFor, NgIf} from 'angular2/angular2';
 })
 @View({
     template: `
-        <div class="row z-depth-1 teal" style="display: flex">
-            <div class="col s4">
+        <div class="row" style="display: flex">
+            <div class="col s4 teal z-depth-1">
                 <div class="col s11 offset-l1 white-text bottom-sheet" style="margin-top: 20px">
                     <ng-content select=".project-brief"></ng-content>
                 </div>
@@ -24,6 +24,6 @@ import {Component, View, NgFor, NgIf} from 'angular2/angular2';
             </div>
         </div>
     `,
-    directives: [ NgFor, NgIf]
+    directives: [NgFor, NgIf]
 })
 export class Project{}
