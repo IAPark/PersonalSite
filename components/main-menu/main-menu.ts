@@ -27,7 +27,7 @@ export class MainMenu{
         this.links = [
             {
                 component: "/home",
-                text: "Home",
+                text: "About",
             },
             {
                 component: "/education",

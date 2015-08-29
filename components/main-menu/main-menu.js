@@ -26,7 +26,7 @@ var MainMenu = (function () {
         this.links = [
             {
                 component: "/home",
-                text: "Home",
+                text: "About",
             },
             {
                 component: "/education",
