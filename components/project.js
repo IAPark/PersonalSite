@@ -22,7 +22,7 @@ var Project = (function () {
             properties: ['time', 'classes']
         }),
         angular2_1.View({
-            template: "\n        <div class=\"row\" style=\"display: flex\">\n            <div class=\"col s4 teal z-depth-1 white-text\">\n                <div class=\"col s11 offset-l1 white-text bottom-sheet\" style=\"margin-top: 20px\">\n                    <ng-content select=\".project-brief\"></ng-content>\n                </div>\n            </div>\n            <div class=\"col s8 z-depth-2 white\">\n                <ng-content select=\".project-title\"></ng-content>\n                <ng-content select=\".project-summery\"></ng-content>\n                <ng-content></ng-content>\n            </div>\n        </div>\n    ",
+            template: "\n        <div class=\"col s12\" style=\"display: flex\">\n            <div class=\"col s4 teal z-depth-1 white-text\">\n                <div class=\"col s11 offset-l1 white-text bottom-sheet\" style=\"margin-top: 20px\">\n                    <ng-content select=\".project-brief\"></ng-content>\n                </div>\n            </div>\n            <div class=\"col s8 z-depth-2 white\">\n                <ng-content select=\".project-title\"></ng-content>\n                <ng-content select=\".project-summery\"></ng-content>\n                <ng-content></ng-content>\n            </div>\n        </div>\n    ",
             directives: [angular2_1.NgFor, angular2_1.NgIf]
         }), 
         __metadata('design:paramtypes', [])
