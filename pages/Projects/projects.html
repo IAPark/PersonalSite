@@ -45,17 +45,18 @@
         </p>
 
         <p>
-            The next step is to turn it into a system that we'd actually want to use to control the AC, in
-            particular a better interface to set temperature and a live updating feed of the current temperature
-            is a must. On the backend, I need to finish the hardware and try to use approximations with the temperature
-            sensor to get slightly more accurate readings. Most importantly, I want to implement better security.
+            The next step is to turn it into a system that is complete enough to allow for that real use, in
+            particular a better interface to set temperature and a live updating feed of the current temperature is
+            critical. On the backend, I need to finish the hardware and I plan to use regression of some form to produce
+            more accurate temperature readings given the low accuracy of the sensor. Most importantly, I have to
+            implement better security.
         </p>
 
         <p>
-            One of the most annoying things about this project was my decision to use Angular 2 for the frontend.
+            One of the mistakes I made early in this project was to use Angular 2 for the frontend.
             It's a nice framework and I love learning new things, but it's still in alpha and is not intended
             for production projects. Given this was a learning exercise, I didn't think this would be too much of a
-            problem, but because it's so new there isn't good documentation for it yet and some of the documentation
+            problem, but because it's so new there isn't good documentation for it and some of the documentation
             that does exists is out of date. On the positive side, because of these factors it has a lot of issues
             that I can actually fix and I'm <a href="https://github.com/angular/angular/pull/3793">finally</a>
             contributing to an open source project.
@@ -73,22 +74,22 @@
             <h5>Summery</h5>
             <ul>
                 <li>
-                    <a href="https://github.com/hacksu/kenthackenough-android" style="color: white;">Source</a>
+                    <a href="https://github.com/hacksu/kenthackenough-android">Source</a>
                 </li>
                 <li>
-                    <a href="https://java.com/en/" style="color: white;">Java</a>
+                    <a href="https://java.com/en/">Java</a>
                 </li>
                 <li>
-                    <a href="http://socket.io/" style="color: white;">Socket.IO</a>
+                    <a href="http://socket.io/">Socket.IO</a>
                 </li>
             </ul>
         </div>
 
         <p>
-            This is a project that will probably pick up again as I get closer to the event on October 11th. The
-            app serves as an interface for a backend written by one of our leaders
-            <a href="http://pauldilyard.com/">Paul Dilyard</a>. The system supports events and live messages and may
-            eventually support a voting system for a prize.
+            I plan to pick this project up again as we get closer to the event on October 11th, but at the moment it is
+            on the back burner and not quite complete. The app serves as an interface for a backend written by one of
+            our leaders <a href="http://pauldilyard.com/">Paul Dilyard</a>. The system supports events and live messages
+            and may eventually support a voting system for a prize.
         </p>
 
         <p>
@@ -143,19 +144,19 @@
             then that one of the first projects I would undertake was Minecraft related. This is probably the
             hardest of my projects to explain, but in essence this plugin was designed for and is used exclusively on
             <a href="https://www.reddit.com/r/civcraft/">Civcraft</a>, a server based on building up tools for players
-            so that while there are almost no rules things can still be protected and players can in a way punish
-            other players. Think <a href="https://www.eveonline.com/">Eve Online</a> for Minecraft. When I designed
-            Bastion, there was <a href="https://github.com/civcraft/citadel">Citadel</a>, a plugin designed to protect
-            blocks by allowing the user to "reinforce" them with various resources to make them take multiple break
-            to actually break. This is useful for protecting homes and other builds from people wanting to destroy
-            them, but it leaves a pretty big problem, namely that there is nothing stopping blocks from being placed.
-            Bastion aims to fix that.
+            so that while there are almost no rules things can still be protected and players can still in a blanced way
+            punish other players. Think <a href="https://www.eveonline.com/">Eve Online</a> for Minecraft with less
+            prescribed mechanics. When I designed Bastion, there was already
+            <a href="https://github.com/civcraft/citadel">Citadel</a>, a plugin designed to protect blocks by allowing
+            the user to "reinforce" them with various resources to make them take multiple breaks to actually break.
+            This is useful for protecting homes and other builds from people wanting to destroy them, but it leaves a
+            pretty big problem, namely that there is nothing stopping blocks from being placed. Bastion aims to fix that.
         </p>
 
         <p>
             The big challenge for me was dealing with such a large code base for the first time. I did eventually
             make my way through with lots of mistakes along the way. Now that I know so much more I'd like to go back at
-            some point and rewrite some things I got wrong the first time. If nothing else, I'd love to go back and add
+            some point and rewrite things I got wrong the first time. If nothing else, I'd love to go back and add
             unit tests. At the time I couldn't work out how to do it, but now with knowledge of the concept of Inversion
             of Control I think I could do a much better job, but I'm trying to really devote my time to bettering
             myself as a developer and given Java is a bit of a deadend and I'm not playing on the server anymore it's
