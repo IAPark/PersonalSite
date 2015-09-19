@@ -12,12 +12,12 @@ import {Component, View, NgFor, NgIf} from 'angular2/angular2';
 @View({
     template: `
         <div class="col s12" style="display: flex">
-            <div class="col s4 teal z-depth-1 white-text">
+            <div class="col s5 teal z-depth-1 white-text">
                 <div class="col s11 offset-l1 white-text bottom-sheet" style="margin-top: 20px">
                     <ng-content select=".project-brief"></ng-content>
                 </div>
             </div>
-            <div class="col s8 z-depth-2 white">
+            <div class="col s7 z-depth-2 white">
                 <ng-content select=".project-title"></ng-content>
                 <ng-content select=".project-summery"></ng-content>
                 <ng-content></ng-content>

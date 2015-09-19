@@ -33,6 +33,7 @@ import {Thanks} from "pages/thanks"
     { path: '/', component: Home, as: 'home' },
     { path: '/education', component: Education, as: 'education'},
     { path: '/projects', component: Projects, as: 'projects'},
+    { path: '/projects/:project', component: Projects, as: 'project'},
     { path: '/thanks-for-contacting-me', component: Thanks, as: 'thanks'}
 ])
 // main component

@@ -33,6 +33,7 @@ var App = (function () {
             { path: '/', component: Home_1.Home, as: 'home' },
             { path: '/education', component: Education_1.Education, as: 'education' },
             { path: '/projects', component: Projects_1.Projects, as: 'projects' },
+            { path: '/projects/:project', component: Projects_1.Projects, as: 'project' },
             { path: '/thanks-for-contacting-me', component: thanks_1.Thanks, as: 'thanks' }
         ]), 
         __metadata('design:paramtypes', [])
